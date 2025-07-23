@@ -18,19 +18,22 @@
         transform: rotate(-720deg);
     }
 }
-body {
+html, body {
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-}
-.solar-animation-container {
     width: 100%;
     height: 100%;
+    /* we can also take overflow clip at the place of html and h and w in % */
+}
+.solar-animation-container {
     background-color: black;
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
 }
 .sun {
     height: 5em;
@@ -191,4 +194,10 @@ body {
 .pluto {
     top: 4.3em;
     left: 4.3em;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 10px;
+    }
 }
